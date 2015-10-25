@@ -1,0 +1,62 @@
+var request = require('request'),
+    cheerio = require('cheerio'),
+    express = require('express'),
+    open = require('open'),
+    app = express();
+
+// Make a GET Request under '/collect' that retunrs JSON data of
+app.get('/scrape', function(req, res) {
+  request('http://www.supremenewyork.com/shop/all', function(err, resp, html, rrr, body) {
+
+        /*
+        When making a request to the site if it retunrs back a response of 200 then
+        */
+
+        String.prototype.capitalizeEachWord = function()
+        {
+            return this.replace(/\w\S*/g, function(txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+        }
+
+        if (!err && resp.statusCode == 200) {
+
+          var $ = cheerio.load(html);
+          var parsedResults = [];
+
+          $('img').each(function(i, element) {
+
+            var nextElement = $(this).next();
+            var prevElement = $(this).prev();
+
+            var title = $(this).attr('alt');
+            var imageLink = $(this).attr('src').substring(2);
+            var availability = nextElement.text().capitalizeEachWord();
+            var itemLink = "http://www.supremenewyork.com" + $('#container').find('a').attr('href');
+
+            if (availability == "") availability = "Available";
+
+            var metadata = {
+              title: title,
+              itemLink: itemLink,
+              imageLink: imageLink,
+              availability: availability
+            };
+            parsedResults.push(metadata);
+          });
+          // console.log(parsedResults);
+          res.send(JSON.stringify(parsedResults));
+        }
+  });
+});
+
+app.get('/', function(req, res) {
+
+    res.redirect('/scrape');
+
+});
+
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  open('http://localhost:'+this.address().port+'/');
+});
