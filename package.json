@@ -12,6 +12,7 @@
 
       "express": "latest",
       "cheerio": "latest",
+      "node-gcm": "0.12.0",
       "request": "latest",
       "open": "latest"
 

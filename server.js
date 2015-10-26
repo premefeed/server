@@ -44,7 +44,7 @@ app.get('/scrape', function(req, res) {
             };
             parsedResults.push(metadata);
           });
-          // console.log(parsedResults);
+          console.log(parsedResults);
           res.send(JSON.stringify(parsedResults));
         }
   });
