@@ -36,7 +36,7 @@ app.get('/api/v1/scrape', function(req, res) {
             var prevElement = $(this).prev();
 
             var title = $(this).attr('alt');
-            var imageLink = $(this).attr('src').substring(2);
+            var imageLink = "http://" + $(this).attr('src').substring(2);
             var availability = nextElement.text().capitalizeEachWord();
             var itemLink = "http://www.supremenewyork.com" + $('#container').find('a').attr('href');
 
