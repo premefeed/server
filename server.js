@@ -4,8 +4,14 @@ var request = require('request'),
     open = require('open'),
     app = express();
 
+app.get('/api/v1/', function(req, res) {
+
+    res.send("( ͡° ͜ʖ ͡°)");
+    
+}
+
 // Make a GET Request under '/collect' that retunrs JSON data of
-app.get('/scrape', function(req, res) {
+app.get('/api/v1/scrape', function(req, res) {
   request('http://www.supremenewyork.com/shop/all', function(err, resp, html, rrr, body) {
 
         /*
