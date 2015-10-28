@@ -42,9 +42,9 @@ app.get('/scrape', function(req, res) {
               imageLink: imageLink,
               availability: availability
             };
-            parsedResults.push(metadata);
+            parsedResults.push(JSON.stringify(metadata));
           });
-          console.log(parsedResults);
+          console.log(JSON.stringify(parsedResults));
           res.send(JSON.stringify(parsedResults));
         }
   });
