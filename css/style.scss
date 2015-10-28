@@ -1,0 +1,247 @@
+$default-font:'Roboto', sans-serif;
+$font-weight-thin:100;
+$font-weight-normal:300; 
+$font-weight-bold:400; 
+
+$width-mobile: 500px;
+$width-tablet: 750px;
+
+$max-width: 750px;
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+	@media (max-width:$width-mobile) {
+		font-size: 14px;
+	}
+    font-family: $default-font;
+    font-weight: $font-weight-normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    font-weight: $font-weight-thin;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+  font-weight: $font-weight-normal;
+}
+
+a:hover {
+  color: black;
+}
+
+header {
+
+	padding: 35px 0 30px 0;
+	font-size: 18px;
+	height: 290px;
+	margin: 0 auto;
+
+	background:black;
+	color:white;
+	text-align:center;
+
+	@media (max-width:$width-mobile) {
+		padding: 30px 0 10px 0;
+		font-size: 12px;
+		height: 220px;
+	}
+
+	.logo {
+		margin-right: 15px;
+
+		max-width: 70px;
+		@media (max-width:$width-mobile) {
+			max-width: 50px;
+		}
+
+	}
+
+	h1 {
+		display: inline-block;
+		margin: 0;
+
+		font-size: 50px;
+		vertical-align: 15px;
+		@media (max-width:$width-mobile) {
+			font-size: 40px;
+			vertical-align: 10px;
+		
+		}
+
+		a {
+		    font-weight: $font-weight-thin;
+			color:white;
+		}
+
+		a:hover {
+			color:white;
+		}
+	}
+}
+
+
+.appstore {
+	padding: 10px 0 20px 0;
+	width: 175px;
+	@media (max-width:$width-mobile) {
+		width: 145px;
+	}
+}	
+
+.ribbon {
+
+	max-width:$max-width;
+	margin: 0 auto;
+	overflow: hidden;
+
+	@media (max-width:$width-tablet) {
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 25px;
+		display: inline-block;
+		margin: 0;
+
+		@media (max-width:$width-mobile) {
+			font-size: 20px;
+		}
+
+		@media (max-width:$width-tablet) {
+			text-align: center;
+			display: block;
+		}
+	}
+
+	.image {
+		display: inline-block;
+		max-width: 50%;
+		float: left;
+
+		@media (max-width:$width-tablet) {
+			max-width: 400px;
+			margin: 0 auto;
+			float: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.left {
+		padding-right: 40px;
+		text-align: right;
+	}
+
+	.right {
+		padding-left: 40px;
+		text-align: left;
+	}
+
+	.caption {
+		display: inline-block;
+
+		padding-top: 150px;
+		float: left;
+		max-width: 50%;
+
+		@media (max-width:$width-tablet) {
+			padding-top: 30px;
+			max-width: 100%;
+			padding-left: 0; 
+			padding-right: 0;
+			float: none;
+			text-align: center;
+		}
+
+		p {
+			@media (max-width:$width-tablet) {
+				text-align: left;
+			}
+		}
+
+		.appstore {
+			max-width: 145px;
+			padding: 10px 0;
+		}
+	}
+
+	.full {
+		padding-top: 30px;
+		max-width: 100%;
+		float: none;
+		text-align: center;
+
+		p {
+			@media (max-width:$width-tablet) {
+				text-align: left;
+			}
+		}
+
+		h3 {
+			display: block;
+		}
+	}
+
+	padding: 10px 30px 0px 30px;
+}
+
+
+.privacy
+{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	
+	h2 {
+		text-align: center;
+		font-weight: $font-weight-normal;
+	}
+
+	@media (max-width:$width-tablet) {
+		text-align: left;
+	}
+}
+
+hr {
+	margin-top: 30px;
+	width: 500px;
+	
+	@media (max-width:$width-tablet) {
+		max-width: 60%;
+	}
+
+	border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #cccccc; //old IE
+    background-color: #cccccc; //Modern Browsers
+}
+
+.extra-padding {
+	margin-top: 40px;
+}
+
+footer {
+	padding: 25px 0;
+	text-align: center;
+}

@@ -1,0 +1,177 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: none;
+  /* Prevent font scaling in landscape */ }
+
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
+  @media (max-width: 500px) {
+    body {
+      font-size: 14px; } }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font-weight: 100; }
+
+a {
+  color: gray;
+  text-decoration: none;
+  font-weight: 300; }
+
+a:hover {
+  color: black; }
+
+  @media (min-width: 750px)
+  .phone {
+      top: -14rem;
+      right: 5rem;
+      max-height: 510px;
+  }
+
+header {
+  padding: 35px 0 30px 0;
+  font-size: 18px;
+  height: 290px;
+  margin: 0 auto;
+  background: #eb3b19;
+  color: white;
+  text-align: center; }
+  @media (max-width: 500px) {
+    header {
+      padding: 30px 0 10px 0;
+      font-size: 12px;
+      height: 220px; } }
+  header .logo {
+    margin-right: 15px;
+    max-width: 150px; }
+    @media (max-width: 500px) {
+      header .logo {
+        max-width: 50px; } }
+  header h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 50px;
+    vertical-align: 15px; }
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 40px;
+        vertical-align: 10px; } }
+    header h1 a {
+      font-weight: 100;
+      color: white; }
+    header h1 a:hover {
+      color: white; }
+
+.appstore {
+  padding: 10px 0 20px 0;
+  width: 175px; }
+  @media (max-width: 500px) {
+    .appstore {
+      width: 145px; } }
+
+.ribbon {
+  max-width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px 30px 0px 30px; }
+  @media (max-width: 750px) {
+    .ribbon {
+      text-align: center; } }
+  .ribbon h3 {
+    font-size: 25px;
+    display: inline-block;
+    margin: 0; }
+    @media (max-width: 500px) {
+      .ribbon h3 {
+        font-size: 20px; } }
+    @media (max-width: 750px) {
+      .ribbon h3 {
+        text-align: center;
+        display: block; } }
+  .ribbon .image {
+    display: inline-block;
+    max-width: 50%;
+    float: left; }
+    @media (max-width: 750px) {
+      .ribbon .image {
+        max-width: 400px;
+        margin: 0 auto;
+        float: none; } }
+    .ribbon .image img {
+      max-width: 100%; }
+  .ribbon .left {
+    padding-right: 40px;
+    text-align: right; }
+  .ribbon .right {
+    padding-left: 40px;
+    text-align: left; }
+  .ribbon .caption {
+    display: inline-block;
+    padding-top: 150px;
+    float: left;
+    max-width: 50%; }
+    @media (max-width: 750px) {
+      .ribbon .caption {
+        padding-top: 30px;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        float: none;
+        text-align: center; } }
+    @media (max-width: 750px) {
+      .ribbon .caption p {
+        text-align: left; } }
+    .ribbon .caption .appstore {
+      max-width: 145px;
+      padding: 10px 0; }
+  .ribbon .full {
+    padding-top: 30px;
+    max-width: 100%;
+    float: none;
+    text-align: center; }
+    @media (max-width: 750px) {
+      .ribbon .full p {
+        text-align: left; } }
+    .ribbon .full h3 {
+      display: block; }
+
+.privacy {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .privacy h2 {
+    text-align: center;
+    font-weight: 300; }
+  @media (max-width: 750px) {
+    .privacy {
+      text-align: left; } }
+
+hr {
+  margin-top: 30px;
+  width: 500px;
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #cccccc;
+  background-color: #cccccc; }
+  @media (max-width: 750px) {
+    hr {
+      max-width: 60%; } }
+
+.extra-padding {
+  margin-top: 40px; }
+
+footer {
+  padding: 25px 0;
+  text-align: center; }
