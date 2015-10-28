@@ -58,7 +58,7 @@ header {
     max-width: 150px; }
     @media (max-width: 500px) {
       header .logo {
-        max-width: 50px; } }
+        max-width: 100px; } }
   header h1 {
     display: inline-block;
     margin: 0;
