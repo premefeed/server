@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "Alerts for the latest Supreme Products",
   "main": "server.js",
-  "dependencies": {
-    "cheerio": "^0.19.0",
-    "request": "^2.65.0",
-    "express": "^4.13.3"
-  },
     "dependencies": {
 
       "express": "4.13.3",
