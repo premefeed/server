@@ -1,14 +1,10 @@
 var request = require('request'),
     cheerio = require('cheerio'),
     express = require('express'),
+    fs = require('fs'),
     open = require('open'),
     app = express();
 
-app.get('/api/v1/', function(req, res) {
-
-    res.send("( ͡° ͜ʖ ͡°)");
-    
-}
 
 // Make a GET Request under '/collect' that retunrs JSON data of
 app.get('/api/v1/scrape', function(req, res) {
@@ -58,8 +54,14 @@ app.get('/api/v1/scrape', function(req, res) {
 
 app.get('/', function(req, res) {
 
-    res.redirect('/scrape');
+    res.redirect('/api/v1/');
 
+});
+
+app.get('/api/v1/', function(req, res) {
+
+    res.send('( ͡° ͜ʖ ͡°) are you looking for <a href="/api/v1/scrape">this</a>?');
+    
 });
 
 app.listen(process.env.PORT || 3000, function(){
