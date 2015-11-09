@@ -54,9 +54,9 @@ crawler.on("fetchcomplete", function (queueItem) {
             var availability = nextElement.text().capitalizeEachWord();
             var itemLink = "http://www.supremenewyork.com" + $('#container').find('a').attr('href');
 
-            console.log("Latest Product: ", title);
 
-            /*
+          /*
+
             fs.readFile('output.json', function(err, data) {
 
               if (err) throw err;
@@ -66,29 +66,37 @@ crawler.on("fetchcomplete", function (queueItem) {
 
                   console.log("Something has changed");
 
-                  // TODO: twilio, nodemailer, gcm 
+                  // TODO: twilio, nodemailer, gcm
 
               }
             });
-            */
 
-            fs.writeFile('output.json', JSON.stringify(parsedResults, null, 4), function (error) {
-                console.log('Output file successfully written');
-            });
+          */
+
+          fs.writeFile('output.txt', JSON.stringify(parsedResults, null, 1), function(err) {
+
+                  	console.log('File successfully written! - Check your project directory for the output.json file');
+
+          });
+
+          console.log(parsedResults);
+
 
             if (availability == "") availability = "Available";
 
             var metadata = {
+
               title: title,
               itemLink: itemLink,
               imageLink: imageLink,
               availability: availability
+
             };
 
-            parsedResults.push(JSON.stringify(metadata));
+            parsedResults.push(metadata);
 
           });
-          
+
           // res.json(JSON.stringify(parsedResults));
 
         }
@@ -105,14 +113,59 @@ app.get('/', function(req, res) {
 
 app.get('/api/v1/', function(req, res) {
 
-    res.send('( ͡° ͜ʖ ͡°) are you looking for <a href="/api/v1/scrape">this</a>?');
-    
+    res.send('<h1>( ͡° ͜ʖ ͡°) are you looking for <a href="/api/v1/scrape">this</a>?</h1>');
+
 });
 
 app.get('/api/v1/scrape', function(req, res) {
 
-    res.sendFile(__dirname + '/output.json');
-    
+  request(url, function(err, resp, html, rrr, body) {
+
+        String.prototype.capitalizeEachWord = function()
+        {
+            return this.replace(/\w\S*/g, function(txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+        }
+
+        if (!err && resp.statusCode == 200) {
+
+          var $ = cheerio.load(html);
+          var parsedResults = [];
+
+          $('img').each(function(i, element) {
+
+            var nextElement = $(this).next();
+            var prevElement = $(this).prev();
+
+            var title = $(this).attr('alt');
+            var imageLink = "http://" + $(this).attr('src').substring(2);
+            var availability = nextElement.text().capitalizeEachWord();
+            var itemLink = "http://www.supremenewyork.com" + $('#container').find('a').attr('href');
+
+          console.log(parsedResults);
+
+
+            if (availability == "") availability = "Available";
+
+            var metadata = {
+
+              title: title,
+              itemLink: itemLink,
+              imageLink: imageLink,
+              availability: availability
+
+            };
+
+            parsedResults.push(metadata);
+
+          });
+
+          res.json(parsedResults);
+
+        }
+  });
+
 });
 
 app.listen(process.env.PORT || 3000, function(){
