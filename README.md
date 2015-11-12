@@ -25,6 +25,8 @@ by typing in these commands in the terminal.
 ```export TWILIO_ACCOUNT_SID=< Your Twilio SID Key >```
 </br>
 ```export TWILIO_AUTH_TOKEN=< Your Twilio Authentication Token Key >```
+</br>
+Start the server ```node server.js```
 
 
 <a href="http://premefeed.herokuapp.com/">Check it Out</a>
