@@ -5,11 +5,16 @@
 
 var request = require('request'),
     cheerio = require('cheerio'),
+
     express = require('express'),
     fs = require('fs'),
+    ejs =  require('ejs'),
+    io = require('socket.io'),
     open = require('open'),
     Crawler = require('simplecrawler'),
     app = express();
+
+app.set('view engine','ejs');
 
 var url = "http://www.supremenewyork.com/shop/all";
 
@@ -73,9 +78,9 @@ crawler.on("fetchcomplete", function (queueItem) {
 
           */
 
-          fs.writeFile('output.txt', JSON.stringify(parsedResults, null, 1), function(err) {
+          fs.writeFile('output.json', JSON.stringify(parsedResults, null, 1), function(err) {
 
-                  	console.log('File successfully written! - Check your project directory for the output.json file');
+                  	// console.log('File successfully written! - Check your project directory for the output.json file');
 
           });
 
@@ -167,6 +172,16 @@ app.get('/api/v1/scrape', function(req, res) {
   });
 
 });
+
+app.get('/chart', function (req, res) {
+
+    // TODO: Socket.io Config/Setup
+
+    res.render('chart');
+
+});
+
+
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
