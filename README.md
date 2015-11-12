@@ -22,6 +22,8 @@ Structure
 Make sure to have your Environment Variables Setup you can do this
 by typing in these commands in the terminal.
 
+*If you're deploying to Heroku and having trouble setting up Environment variables, check <a href="https://devcenter.heroku.com/articles/config-vars">this</a> out.
+
 ```export TWILIO_ACCOUNT_SID=< Your Twilio SID Key >```
 </br>
 ```export TWILIO_AUTH_TOKEN=< Your Twilio Authentication Token Key >```
