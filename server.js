@@ -21,7 +21,6 @@ var TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID,
     TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
 var client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 app.set('view engine','ejs');
-dotenv.load();
 
 var url = "http://www.supremenewyork.com/shop/all";
 
