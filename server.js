@@ -2,19 +2,26 @@
 // Peter Soboyejo
 // http://www.github.com/dzt
 
-
 var request = require('request'),
     cheerio = require('cheerio'),
-
+    twilio = require('twilio'),
     express = require('express'),
     fs = require('fs'),
+    client = require('twilio'),
     ejs =  require('ejs'),
     io = require('socket.io'),
     open = require('open'),
     Crawler = require('simplecrawler'),
     app = express();
 
+
+
+// app config stuff
+var TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID,
+    TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
+var client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 app.set('view engine','ejs');
+dotenv.load();
 
 var url = "http://www.supremenewyork.com/shop/all";
 
@@ -24,6 +31,7 @@ crawler.maxConcurrency = 1;
 
 var mins = 0.05,
     interval_a = mins * 60 * 1000
+
 
 
 crawler.on("fetchcomplete", function (queueItem) {
@@ -60,29 +68,12 @@ crawler.on("fetchcomplete", function (queueItem) {
             var itemLink = "http://www.supremenewyork.com" + $('#container').find('a').attr('href');
 
 
-          /*
-
-            fs.readFile('output.json', function(err, data) {
-
-              if (err) throw err;
-              var obj = JSON.parse(data);
-              if (obj != parsedResults) {
-
-
-                  console.log("Something has changed");
-
-                  // TODO: twilio, nodemailer, gcm
-
-              }
-            });
-
-          */
-
           fs.writeFile('output.json', JSON.stringify(parsedResults, null, 4), function(err) {
 
-                  	// console.log('File successfully written! - Check your project directory for the output.json file');
+              // console.log('File successfully written! - Check your project directory for the output.json file');
 
           });
+
 
           console.log(parsedResults);
 
@@ -98,11 +89,17 @@ crawler.on("fetchcomplete", function (queueItem) {
 
             };
 
+            fs.readFile('output.json', function(err, data) {
+                if (err) throw err;
+                var obj = JSON.parse(data);
+                if (obj != parsedResults) {
+                    console.log('Something has changed.');
+              }
+            });
+
             parsedResults.push(metadata);
 
           });
-
-          // res.json(JSON.stringify(parsedResults));
 
         }
   });
@@ -112,19 +109,24 @@ crawler.on("fetchcomplete", function (queueItem) {
 
 app.get('/', function(req, res) {
 
-    res.redirect('/api/v1/');
+    res.send('<a href="/scrape">Click here to get some data</a></br><a href="http://dzt.github.io/premefeed/">GitHub</a>');
 
 });
 
-app.get('/api/v1/', function(req, res) {
-
-    res.send('<a href="/api/v1/scrape">Click here to get some data</a></br><a href="http://dzt.github.io/premefeed/">GitHub</a>');
-
-});
-
-app.get('/api/v1/scrape', function(req, res) {
+app.get('/scrape', function(req, res) {
 
     res.sendFile(__dirname + '/output.json');
+
+});
+
+app.post('/sms_subscribe', function(req, res) {
+
+    // My Twilio number +1 (609)-917-7050
+    // Idea - To Text "Subscribe" to get updates on the latest updates
+    // SUBSCRIBE: Text Command
+    // UNSUBSCRIBE: Text Command
+
+    // TODO: Twilio Stuff
 
 });
 
@@ -136,7 +138,7 @@ app.get('/chart', function (req, res) {
 
 });
 
-
+require('./env.js');
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);

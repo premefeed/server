@@ -4,7 +4,7 @@ Alerts for the latest Supreme Products (Restocks, New Products, and Sold Out Pro
 
 Created by <a href="https://github.com/trommel/">Peter Soboyejo</a> & <a href="https://github.com/trommel/">Josh Trommel</a>
 
-Structure 
+Structure
 
 ```JSON
 
@@ -18,5 +18,12 @@ Structure
 
 
 ```
+
+Make sure to have your Environment Variables Setup you can do this
+by typing in these commands in the terminal.
+
+```export TWILIO_ACCOUNT_SID=< Your Twilio SID Key >```
+```export TWILIO_AUTH_TOKEN=< Your Twilio Authentication Token Key >```
+
 
 <a href="http://premefeed.herokuapp.com/">Check it Out</a>
