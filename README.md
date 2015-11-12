@@ -28,6 +28,8 @@ by typing in these commands in the terminal.
 </br>
 ```export TWILIO_AUTH_TOKEN=< Your Twilio Authentication Token Key >```
 </br>
+```export TWILIO_NUMBER=< Your Assigned Twilio Phone Number >```
+</br>
 Start the server ```node server.js```
 
 

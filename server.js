@@ -14,8 +14,6 @@ var request = require('request'),
     Crawler = require('simplecrawler'),
     app = express();
 
-
-
 // app config stuff
 var TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID,
     TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
@@ -124,14 +122,36 @@ app.get('/scrape', function(req, res) {
 
 app.post('/sms_subscribe', function(req, res) {
 
-    // My Twilio number +1 (609)-917-7050
-    // Idea - To Text "Subscribe" to get updates on the latest updates
-    // SUBSCRIBE: Text Command
-    // UNSUBSCRIBE: Text Command
-
-    // TODO: Twilio Stuff
+  setTimeout(function(){
+      try {
+          SendMessage(req.body.phoneNumber, function(result){
+            res.writeHead(200, {"Content-Type": "application/json"});
+            res.end(JSON.stringify({"success": true}));
+          });
+      } catch (err) {
+        console.log(err);
+      }
+    }, 5000);
 
 });
+
+function SendMessage(phoneNumber, callback) {
+  // Build the post string from an object
+
+  if (phoneNumber[0] !== "1"){
+    phoneNumber = "1" + phoneNumber;
+  }
+  client.sendSms({
+     to: '+'+phoneNumber,
+     from: process.env.TWILIO_NUMBER,
+     body: "Gang Gang" +
+           " - Peter "
+  }, function(err, responseData){
+    console.log(err);
+    callback(responseData);
+  });
+}
+
 
 app.get('/chart', function (req, res) {
 
