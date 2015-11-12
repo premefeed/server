@@ -88,6 +88,8 @@ crawler.on("fetchcomplete", function (queueItem) {
 
             };
 
+            /*
+
             fs.readFile('output.json', function(err, data) {
                 if (err) throw err;
                 var obj = JSON.parse(data);
@@ -95,6 +97,8 @@ crawler.on("fetchcomplete", function (queueItem) {
                     console.log('Something has changed.');
               }
             });
+
+            */
 
             parsedResults.push(metadata);
 
