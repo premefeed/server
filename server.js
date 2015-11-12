@@ -78,7 +78,7 @@ crawler.on("fetchcomplete", function (queueItem) {
 
           */
 
-          fs.writeFile('output.json', JSON.stringify(parsedResults, null, 1), function(err) {
+          fs.writeFile('output.json', JSON.stringify(parsedResults, null, 4), function(err) {
 
                   	// console.log('File successfully written! - Check your project directory for the output.json file');
 
@@ -118,58 +118,13 @@ app.get('/', function(req, res) {
 
 app.get('/api/v1/', function(req, res) {
 
-    res.send('<h1>( ͡° ͜ʖ ͡°) are you looking for <a href="/api/v1/scrape">this</a>?</h1>');
+    res.send('<a href="/api/v1/scrape">Click here to get some data</a></br><a href="http://dzt.github.io/premefeed/">GitHub</a>');
 
 });
 
 app.get('/api/v1/scrape', function(req, res) {
 
-  request(url, function(err, resp, html, rrr, body) {
-
-        String.prototype.capitalizeEachWord = function()
-        {
-            return this.replace(/\w\S*/g, function(txt) {
-                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-            });
-        }
-
-        if (!err && resp.statusCode == 200) {
-
-          var $ = cheerio.load(html);
-          var parsedResults = [];
-
-          $('img').each(function(i, element) {
-
-            var nextElement = $(this).next();
-            var prevElement = $(this).prev();
-
-            var title = $(this).attr('alt');
-            var imageLink = "http://" + $(this).attr('src').substring(2);
-            var availability = nextElement.text().capitalizeEachWord();
-            var itemLink = "http://www.supremenewyork.com" + $('#container').find('a').attr('href');
-
-          console.log(parsedResults);
-
-
-            if (availability == "") availability = "Available";
-
-            var metadata = {
-
-              title: title,
-              itemLink: itemLink,
-              imageLink: imageLink,
-              availability: availability
-
-            };
-
-            parsedResults.push(metadata);
-
-          });
-
-          res.json(parsedResults);
-
-        }
-  });
+    res.sendFile(__dirname + '/output.json');
 
 });
 
