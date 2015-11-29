@@ -2,7 +2,7 @@
 
 Alerts for the latest Supreme Products (Restocks, New Products, and Sold Out Products)
 
-Created by <a href="https://github.com/trommel/">Peter Soboyejo</a> & <a href="https://github.com/trommel/">Josh Trommel</a>
+Created by <a href="https://github.com/trommel/">Peter</a> & <a href="https://github.com/10Frank10/">Frank</a>
 
 Structure
 
