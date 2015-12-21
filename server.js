@@ -180,7 +180,7 @@ app.get('/api/items/all', function(req, res) {
  */
 
 // What is this? -sam
-app.get('/chart', function (req, res) {
+/*app.get('/chart', function (req, res) {
     // TODO: Socket.io Config/Setup
     res.render('chart');
 });*/
