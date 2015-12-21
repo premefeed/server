@@ -48,7 +48,7 @@ crawler.on("fetchcomplete", function (queueItem) {
 
                 var title = $(this).attr('alt');
                 var availability = nextElement.text().capitalizeEachWord();
-                
+
                 var link = "http://www.supremenewyork.com" + this.parent.attribs.href;
 
                 if (availability == "") availability = "Available";
@@ -185,15 +185,11 @@ app.get('/api/v1/items/all', function(req, res) {
     fs.readFile('output.json', function(err, data) {
         res.send(JSON.parse(data));
     });
-<<<<<<< HEAD
 });
 
 /*
  *  END API ENDPOINTS
  */
-=======
-}); 
->>>>>>> bb439e42571fdd0a8838d5b904bdba05ec3e17ba
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
