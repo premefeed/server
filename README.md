@@ -94,7 +94,7 @@ Data Returned:
 
 <br>
 
-###### `/api/v1/items/all`
+##### `/api/v1/items/all`
 Returns an array of all items in the Database.
 
 URL parameters:
