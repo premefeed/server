@@ -7,6 +7,7 @@ Created by <a href="https://github.com/dzt/">Peter</a>, <a href="https://github.
 ### API/Structure
 
 The API works similarly to any other REST API. However, because I'm lazy, the endpoints can seem a little redundant. We'll get to that though. Information on each endpoint will be updated frequently below.
+
 <br>
 
 ##### `/api/v1/item/title`
