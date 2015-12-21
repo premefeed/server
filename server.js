@@ -63,7 +63,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                         style: $('.style').attr('itemprop', 'model').text(),
                         link: link,
                         description: $('.description').text(),
-                        price: $('.price')[0].children[0].children[0].data,
+                        price: parseInt(($('.price')[0].children[0].children[0].data).replace('$', '').replace(',', '')),
                         images: [],
                         availability: availability
                     };
