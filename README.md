@@ -10,28 +10,32 @@ The API works similarly to any other REST API. However, because I'm lazy, the en
 
 <br>
 
-##### `/api/v1/item/title`
-Returns an item by its title.
+##### `/api/v1/item/id`
+Returns an item by its id. An `id` is an item's `title` and `style` md5 hashed together (`server.js, line: 65`).
 
 URL parameters:
 
-* title    :   The title of the item to find
+* id    :   The id of the item to find
 
 Example:
 
-`GET: premefeed.herokuapp.com/api/v1/item/title?title=Child of hell keychain`
+`GET: premefeed.herokuapp.com/api/v1/item/id?id=7c6f6661981ce08f4851dddf37c8d086`
 
 Data Returned:
 ```JSON
-{
-    "title": "Child of hell keychain",
-    "style": "Leather",
-    "link": "http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather",
-    "description": "Leather with debossed graphic on front, printed graphic on back and 1” key ring.",
-    "price": "$10",
-    "images": ["http://d17ol771963kd3.cloudfront.net/110188/zo/w3Qw30JB9xE.jpg", "http://d17ol771963kd3.cloudfront.net/110190/zo/wFmXjoex5HA.jpg"],
-    "availability":"Available"
-}
+[
+    {
+        "id": "7c6f6661981ce08f4851dddf37c8d086",
+        "title": "Polartec® Fleece Pant",
+        "style": "Medium Blue",
+        "link": "http://www.supremenewyork.com/shop/pants/polartec-fleece-pant/medium-blue",
+        "description": "Polartec® 200 fleece. Front slash pockets, single back zip pocket, and elastic waistband and cuffs. Embroidered logo on back pocket.",
+        "price": 128,
+        "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg","http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
+        "availability": "Available"
+        },
+        ...
+]
 ```
 
 <br>
@@ -45,19 +49,50 @@ URL parameters:
 
 Example:    
 
-`GET: premefeed.herokuapp.com/api/v1/item/link?link=http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather`
+`GET: premefeed.herokuapp.com/api/v1/item/link?link=http://www.supremenewyork.com/shop/pants/polartec-fleece-pant/medium-blue`
 
 Data Returned:
 ```JSON
 {
-    "title": "Child of hell keychain",
-    "style": "Leather",
-    "link": "http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather",
-    "description": "Leather with debossed graphic on front, printed graphic on back and 1” key ring.",
-    "price": "$10",
-    "images": ["http://d17ol771963kd3.cloudfront.net/110188/zo/w3Qw30JB9xE.jpg", "http://d17ol771963kd3.cloudfront.net/110190/zo/wFmXjoex5HA.jpg"],
-    "availability":"Available"
-}
+    "id": "7c6f6661981ce08f4851dddf37c8d086",
+    "title": "Polartec® Fleece Pant",
+    "style": "Medium Blue",
+    "link": "http://www.supremenewyork.com/shop/pants/polartec-fleece-pant/medium-blue",
+    "description": "Polartec® 200 fleece. Front slash pockets, single back zip pocket, and elastic waistband and cuffs. Embroidered logo on back pocket.",
+    "price": 128,
+    "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg", "http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
+    "availability": "Available"
+    }
+```
+
+<br>
+
+##### `/api/v1/items/title`
+Returns an array of items by their title.
+
+URL parameters:
+
+* title    :   The title of the items to find
+
+Example:
+
+`GET: premefeed.herokuapp.com/api/v1/item/title?title=Polartec® Fleece Pant`
+
+Data Returned:
+```JSON
+[
+    {
+        "id": "7c6f6661981ce08f4851dddf37c8d086",
+        "title": "Polartec® Fleece Pant",
+        "style": "Medium Blue",
+        "link": "http://www.supremenewyork.com/shop/pants/polartec-fleece-pant/medium-blue",
+        "description": "Polartec® 200 fleece. Front slash pockets, single back zip pocket, and elastic waistband and cuffs. Embroidered logo on back pocket.",
+        "price": 128,
+        "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg","http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
+        "availability": "Available"
+        },
+        ...
+]
 ```
 
 <br>
@@ -77,18 +112,16 @@ Data Returned:
 ```JSON
 [
     {
-        "title": "Child of hell keychain",
-        "style": "Leather",
-        "link": "http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather",
-        "description": "Leather with debossed graphic on front, printed graphic on back and 1” key ring.",
-        "price": "$10",
-        "images": ["http://d17ol771963kd3.cloudfront.net/110188/zo/w3Qw30JB9xE.jpg", "http://d17ol771963kd3.cloudfront.net/110190/zo/wFmXjoex5HA.jpg"],
-        "availability":"Available"
-    },
-    {
+        "id": "7c6f6661981ce08f4851dddf37c8d086",
+        "title": "Polartec® Fleece Pant",
+        "style": "Medium Blue",
+        "link": "http://www.supremenewyork.com/shop/pants/polartec-fleece-pant/medium-blue",
+        "description": "Polartec® 200 fleece. Front slash pockets, single back zip pocket, and elastic waistband and cuffs. Embroidered logo on back pocket.",
+        "price": 128,
+        "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg","http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
+        "availability": "Available"
+        },
         ...
-    },
-    ...
 ]
 ```
 
