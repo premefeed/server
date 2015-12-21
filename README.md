@@ -102,7 +102,8 @@ URL parameters:
 None
 
 Example:
-    `GET: premefeed.herokuapp.com/api/v1/items/all`
+
+`GET: premefeed.herokuapp.com/api/v1/items/all`
 
  Data Returned:
  ```JSON
