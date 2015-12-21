@@ -99,8 +99,6 @@ crawler.on("fetchcomplete", function (queueItem) {
                         console.log('Something has changed.');
                   }
               });*/
-
-                // parsedResults.push(metadata);
             });
         } else if (err && resp.statusCode != 200) {
             console.log("Error: " + err + "\n with status code: " + resp.statusCode);
@@ -220,11 +218,8 @@ function SendMessage(phoneNumber, callback) {
 
 // What is this? -sam
 app.get('/chart', function (req, res) {
-
     // TODO: Socket.io Config/Setup
-
     res.render('chart');
-
 });*/
 
 app.listen(process.env.PORT || 3000, function(){
