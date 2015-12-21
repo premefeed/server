@@ -84,7 +84,6 @@ crawler.on("fetchcomplete", function (queueItem) {
                 })
 
                 // Do we need this shit? Only need I see is for detecting when Supreme makes changes, so that we can send out notifications -sam
-
                 /*fs.readFile('output.json', function(err, data) {
                     if (err) throw err;
                     var obj = JSON.parse(data);
@@ -103,13 +102,8 @@ crawler.on("fetchcomplete", function (queueItem) {
 
 
 app.get('/', function(req, res) {
-    res.send('<a href="/api/items/all">Click here to get some data</a></br><a href="http://premefeed.github.io/">GitHub</a>');
+    res.send('<a href="/api/v1/items/all">Click here to get some data</a></br><a href="http://premefeed.github.io/">GitHub</a>');
 });
-
-// Deprecated & replaced by /api/items/all
-/*app.get('/scrape', function(req, res) {
-    res.sendFile(__dirname + '/output.json');
-});*/
 
 
 /*
