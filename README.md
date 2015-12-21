@@ -6,20 +6,19 @@ Created by <a href="https://github.com/dzt/">Peter</a>, <a href="https://github.
 
 ### API/Structure
 
-The API works similarly to any other REST API. However, because I'm lazy, the endpoints can seem a little redundant. We'll get to that though.
+The API works similarly to any other REST API. However, because I'm lazy, the endpoints can seem a little redundant. We'll get to that though. Information on each endpoint will be updated frequently below.
 
-Endpoints that return single objects will return something like the following:
 
-Information on each endpoint will be updated frequently below.
 
 ##### `/api/v1/item/title`
 Returns an item by its title.
+
 URL parameters:
     * title    :   The title of the item to find
 
 Example:
 
-    `GET: premefeed.herokuapp.com/api/v1/item/title?title=Child of hell keychain`
+`GET: premefeed.herokuapp.com/api/v1/item/title?title=Child of hell keychain`
 
 Data Returned:
 ```JSON
@@ -35,14 +34,16 @@ Data Returned:
 ```
 
 
+
 ##### `/api/v1/item/link`
 Returns an item by its link.
+
 URL parameters:
     * link  :   Link of the item to find
 
 Example:    
 
-    `GET: premefeed.herokuapp.com/api/v1/item/link?link=http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather`
+`GET: premefeed.herokuapp.com/api/v1/item/link?link=http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather`
 
 Data Returned:
 ```JSON
@@ -58,13 +59,16 @@ Data Returned:
 ```
 
 
+
 ##### `/api/v1/items/availability`
 Returns an array of items by their availability.
+
 URL parameters:
     * availability  :   Availability of the items to find (can be `Available` or `Sold Out`)
 
 Example:
-    `GET: premefeed.herokuapp.com/api/v1/items/availability?availability=Available`
+
+`GET: premefeed.herokuapp.com/api/v1/items/availability?availability=Available`
 
 Data Returned:
 ```JSON
@@ -86,8 +90,10 @@ Data Returned:
 ```
 
 
+
 ###### `/api/v1/items/all`
 Returns an array of all items in the Database.
+
 URL parameters:
     None
 
@@ -106,6 +112,8 @@ Example:
     ...
 ]
  ```
+
+
 
 
 <a href="http://premefeed.herokuapp.com/" target="\_blank">Check it Out</a>
