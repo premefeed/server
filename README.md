@@ -1,36 +1,111 @@
-# PremeFeed
+# PremeFeed Server
 
-Alerts for the latest Supreme Products (Restocks, New Products, and Sold Out Products)
+Backend for PremeFeed services. The server implements an API service and *eventually* a subscription service.
 
-Created by <a href="https://github.com/trommel/">Peter</a> & <a href="https://github.com/10Frank10/">Frank</a>
+Created by <a href="https://github.com/dzt/">Peter</a>, <a href="https://github.com/10Frank10/">Frank</a>, <a href="https://github.com/cryptoc1">Sam</a>, and some help from <a href="https://github.com/trommel">Josh</a>.
 
-Structure
+### API/Structure
 
+The API works similarly to any other REST API. However, because I'm lazy, the endpoints can seem a little redundant. We'll get to that though.
+
+Endpoints that return single objects will return something like the following:
+
+Information on each endpoint will be updated frequently below.
+
+##### `/api/v1/item/title`
+Returns an item by its title.
+URL parameters:
+    * title    :   The title of the item to find
+
+Example:
+
+    `GET: premefeed.herokuapp.com/api/v1/item/title?title=Child of hell keychain`
+
+Data Returned:
 ```JSON
-
-
-[{
-  "title":"Supreme/Jordan® Hooded Varsity Jacket",
-  "itemLink":"http://www.supremenewyork.com/shop/jackets/supreme-jordan-hooded-varsity-jacket/black",
-  "imageLink":"http://d17ol771963kd3.cloudfront.net/111074/vi/h6bRvhhcyok.jpg",
-  "availability":"Sold Out"
-}]
-
-
+{
+    "title": "Child of hell keychain",
+    "style": "Leather",
+    "link": "http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather",
+    "description": "Leather with debossed graphic on front, printed graphic on back and 1” key ring.",
+    "price": "$10",
+    "images": ["http://d17ol771963kd3.cloudfront.net/110188/zo/w3Qw30JB9xE.jpg", "http://d17ol771963kd3.cloudfront.net/110190/zo/wFmXjoex5HA.jpg"],
+    "availability":"Available"
+}
 ```
 
-Make sure to have your Environment Variables Setup you can do this
-by typing in these commands in the terminal.
 
-*If you're deploying to Heroku and having trouble setting up Environment variables, check <a href="https://devcenter.heroku.com/articles/config-vars">this</a> out.*
+##### `/api/v1/item/link`
+Returns an item by its link.
+URL parameters:
+    * link  :   Link of the item to find
 
-```export TWILIO_ACCOUNT_SID=< Your Twilio SID Key >```
-</br>
-```export TWILIO_AUTH_TOKEN=< Your Twilio Authentication Token Key >```
-</br>
-```export TWILIO_NUMBER=< Your Assigned Twilio Phone Number >```
-</br>
-Start the server ```node server.js```
+Example:    
+
+    `GET: premefeed.herokuapp.com/api/v1/item/link?link=http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather`
+
+Data Returned:
+```JSON
+{
+    "title": "Child of hell keychain",
+    "style": "Leather",
+    "link": "http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather",
+    "description": "Leather with debossed graphic on front, printed graphic on back and 1” key ring.",
+    "price": "$10",
+    "images": ["http://d17ol771963kd3.cloudfront.net/110188/zo/w3Qw30JB9xE.jpg", "http://d17ol771963kd3.cloudfront.net/110190/zo/wFmXjoex5HA.jpg"],
+    "availability":"Available"
+}
+```
 
 
-<a href="http://premefeed.herokuapp.com/">Check it Out</a>
+##### `/api/v1/items/availability`
+Returns an array of items by their availability.
+URL parameters:
+    * availability  :   Availability of the items to find (can be `Available` or `Sold Out`)
+
+Example:
+    `GET: premefeed.herokuapp.com/api/v1/items/availability?availability=Available`
+
+Data Returned:
+```JSON
+[
+    {
+        "title": "Child of hell keychain",
+        "style": "Leather",
+        "link": "http://www.supremenewyork.com/shop/accessories/child-of-hell-keychain/leather",
+        "description": "Leather with debossed graphic on front, printed graphic on back and 1” key ring.",
+        "price": "$10",
+        "images": ["http://d17ol771963kd3.cloudfront.net/110188/zo/w3Qw30JB9xE.jpg", "http://d17ol771963kd3.cloudfront.net/110190/zo/wFmXjoex5HA.jpg"],
+        "availability":"Available"
+    },
+    {
+        ...
+    },
+    ...
+]
+```
+
+
+###### `/api/v1/items/all`
+Returns an array of all items in the Database.
+URL parameters:
+    None
+
+Example:
+    `GET: premefeed.herokuapp.com/api/v1/items/all`
+
+ Data Returned:
+ ```JSON
+[
+    {
+        ...
+    },
+    {
+        ...
+    },
+    ...
+]
+ ```
+
+
+<a href="http://premefeed.herokuapp.com/" target="\_blank">Check it Out</a>

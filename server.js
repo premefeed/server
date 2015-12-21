@@ -45,14 +45,13 @@ crawler.on("fetchcomplete", function (queueItem) {
                 var prevElement = $(this).prev();
 
                 var title = $(this).attr('alt');
-                var imageLink = "http://" + $(this).attr('src').substring(2);
                 var availability = nextElement.text().capitalizeEachWord();
-                var itemLink = "http://www.supremenewyork.com" + this.parent.attribs.href;
+                var link = "http://www.supremenewyork.com" + this.parent.attribs.href;
 
                 if (availability == "") availability = "Available";
 
                 // Scrapes an items product page for: images, price, description, and style. It then writes to output.json
-                request(itemLink, function(err, resp, html, rrr, body) {
+                request(link, function(err, resp, html, rrr, body) {
                     fs.writeFile('output.json', JSON.stringify(parsedResults, null, 4), function(err) {
                         if (err) console.log(err);
                     });
@@ -62,7 +61,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                     var metadata = {
                         title: title,
                         style: $('.style').attr('itemprop', 'model').text(),
-                        itemLink: itemLink,
+                        link: link,
                         description: $('.description').text(),
                         price: $('.price')[0].children[0].children[0].data,
                         images: [],
@@ -121,7 +120,7 @@ app.get('/', function(req, res) {
  */
 
 // Get item by it's title
-app.get('/api/item/title', function(req, res) {
+app.get('/api/v1/item/title', function(req, res) {
     fs.readFile('output.json', function(err, data) {
         if (err) throw err;
         data = JSON.parse(data);
@@ -137,7 +136,7 @@ app.get('/api/item/title', function(req, res) {
 });
 
 // Get item by it's link
-app.get('/api/item/link', function(req, res) {
+app.get('/api/v1/item/link', function(req, res) {
     fs.readFile('output.json', function(err, data) {
         if (err) throw err;
         data = JSON.parse(data);
@@ -153,7 +152,7 @@ app.get('/api/item/link', function(req, res) {
 });
 
 // Get items by their availability
-app.get('/api/items/availability', function(req, res) {
+app.get('/api/v1/items/availability', function(req, res) {
     fs.readFile('output.json', function(err, data) {
         if (err) throw err;
         data = JSON.parse(data);
@@ -169,7 +168,7 @@ app.get('/api/items/availability', function(req, res) {
 });
 
 // Get ALL items
-app.get('/api/items/all', function(req, res) {
+app.get('/api/v1/items/all', function(req, res) {
     fs.readFile('output.json', function(err, data) {
         res.send(JSON.parse(data));
     });
