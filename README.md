@@ -8,12 +8,13 @@ Created by <a href="https://github.com/dzt/">Peter</a>, <a href="https://github.
 
 The API works similarly to any other REST API. However, because I'm lazy, the endpoints can seem a little redundant. We'll get to that though. Information on each endpoint will be updated frequently below.
 
-
+<br>
 
 ##### `/api/v1/item/title`
 Returns an item by its title.
 
 URL parameters:
+
     * title    :   The title of the item to find
 
 Example:
@@ -33,12 +34,13 @@ Data Returned:
 }
 ```
 
-
+<br>
 
 ##### `/api/v1/item/link`
 Returns an item by its link.
 
 URL parameters:
+
     * link  :   Link of the item to find
 
 Example:    
@@ -58,12 +60,13 @@ Data Returned:
 }
 ```
 
-
+<br>
 
 ##### `/api/v1/items/availability`
 Returns an array of items by their availability.
 
 URL parameters:
+
     * availability  :   Availability of the items to find (can be `Available` or `Sold Out`)
 
 Example:
@@ -89,12 +92,13 @@ Data Returned:
 ]
 ```
 
-
+<br>
 
 ###### `/api/v1/items/all`
 Returns an array of all items in the Database.
 
 URL parameters:
+
     None
 
 Example:
@@ -113,7 +117,8 @@ Example:
 ]
  ```
 
-
-
+<br>
+<br>
+<br>
 
 <a href="http://premefeed.herokuapp.com/" target="\_blank">Check it Out</a>
