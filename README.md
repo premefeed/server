@@ -32,8 +32,7 @@ Data Returned:
     "price": 128,
     "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg","http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
     "availability": "Available"
-},
-
+}
 ```
 
 <br>
