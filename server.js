@@ -2,7 +2,7 @@
 // Peter Soboyejo
 // http://www.github.com/dzt
 
-// Last modified: 12/20/2015, @cryptoc1
+// Last modified: 12/21/2015, @cryptoc1
 
 var request = require('request'),
     cheerio = require('cheerio'),
@@ -15,6 +15,7 @@ var request = require('request'),
     io = require('socket.io'),
     open = require('open'),
     Crawler = require('simplecrawler'),
+    md5 = require('md5'),
     app = express();
 
 app.set('view engine','ejs');
@@ -68,6 +69,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                     var $ = cheerio.load(html);
 
                     var metadata = {
+                        id: md5(title + $('.style').attr('itemprop', 'model').text()),
                         title: title,
                         style: $('.style').attr('itemprop', 'model').text(),
                         link: link,
@@ -120,25 +122,24 @@ app.get('/', function(req, res) {
 /*
  *
  *  API endpoints
- *  Added: 12/20/15, @cryptoc1
  *
  */
 
-// Get item by it's title
-app.get('/api/v1/item/title', function(req, res) {
+// Get an item by its id
+app.get('/api/v1/item/id', function(req, res) {
     fs.readFile('output.json', function(err, data) {
         if (err) throw err;
         data = JSON.parse(data);
         var ret;
         for (i in data) {
-            if (data[i].title == req.query.title) {
+            if (data[i].itemLink == req.query.id) {
                 ret = data[i];
             }
         }
         if (ret == NaN || ret == undefined || ret == null) ret = "No Results";
         res.send(JSON.stringify(ret));
     });
-});
+})
 
 // Get item by it's link
 app.get('/api/v1/item/link', function(req, res) {
@@ -152,6 +153,22 @@ app.get('/api/v1/item/link', function(req, res) {
             }
         }
         if (ret == NaN || ret == undefined || ret == null) ret = "No Results";
+        res.send(JSON.stringify(ret));
+    });
+});
+
+// Get items by thier title
+app.get('/api/v1/items/title', function(req, res) {
+    fs.readFile('output.json', function(err, data) {
+        if (err) throw err;
+        data = JSON.parse(data);
+        var ret = [];
+        for (i in data) {
+            if (data[i].title == req.query.title) {
+                ret.push(data[i]);
+            }
+        }
+        if (ret == NaN || ret == undefined || ret == null || ret.lenght == 0) ret = "No Results";
         res.send(JSON.stringify(ret));
     });
 });
@@ -177,7 +194,11 @@ app.get('/api/v1/items/all', function(req, res) {
     fs.readFile('output.json', function(err, data) {
         res.send(JSON.parse(data));
     });
-}); 
+});
+
+/*
+ *  END API ENDPOINTS
+ */
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);

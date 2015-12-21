@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "title": "Supreme/Playboy© Leather Puffy Jacket",
         "style": "Red",
         "link": "http://www.supremenewyork.com/shop/jackets/supreme-playboy-leather-puffy-jacket/red",
@@ -75,6 +76,9 @@
         "availability": "Sold Out"
     },
     {
+=======
+        "id": "f2b7818f9b726072982ee523bf64abb4",
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         "title": "Supreme®/Schott® Shearling Hooded Coat",
         "style": "Black",
         "link": "http://www.supremenewyork.com/shop/jackets/supreme-schott-shearling-hooded-coat/black",
@@ -88,6 +92,7 @@
         "availability": "Available"
     },
     {
+<<<<<<< HEAD
         "title": "Work Pant",
         "style": "Brown",
         "link": "http://www.supremenewyork.com/shop/pants/work-pant/brown",
@@ -220,6 +225,9 @@
         "availability": "Available"
     },
     {
+=======
+        "id": "aeb6a11d506f6fcce298b5510648488b",
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         "title": "Supreme®/Schott® Shearling Hooded Coat",
         "style": "Light Blue",
         "link": "http://www.supremenewyork.com/shop/jackets/supreme-schott-shearling-hooded-coat/light-blue",
@@ -227,6 +235,7 @@
         "price": 1198,
         "images": [
             "http://d17ol771963kd3.cloudfront.net/108952/zo/8ANzpCU6v7Q.jpg",
+<<<<<<< HEAD
             "http://d17ol771963kd3.cloudfront.net/108953/zo/vlM2sAXqedk.jpg",
             "http://d17ol771963kd3.cloudfront.net/108954/zo/vRHHdidgjWk.jpg"
         ],
@@ -1010,10 +1019,15 @@
         "price": 32,
         "images": [
             "http://d17ol771963kd3.cloudfront.net/109858/zo/2um2u7bg1uc.jpg"
+=======
+            "http://d17ol771963kd3.cloudfront.net/108953/zo/vlM2sAXqedk.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108954/zo/vRHHdidgjWk.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         ],
         "availability": "Available"
     },
     {
+<<<<<<< HEAD
         "title": "Disrupt Rubber Patch Beanie",
         "style": "White",
         "link": "http://www.supremenewyork.com/shop/hats/disrupt-rubber-patch-beanie/white",
@@ -1032,10 +1046,38 @@
         "price": 32,
         "images": [
             "http://d17ol771963kd3.cloudfront.net/109860/zo/PNIIet1-Jow.jpg"
+=======
+        "id": "d8f7dfb708acea2c71e627e4188c39fa",
+        "title": "Supreme/Playboy© Leather Puffy Jacket",
+        "style": "Red",
+        "link": "http://www.supremenewyork.com/shop/jackets/supreme-playboy-leather-puffy-jacket/red",
+        "description": "Leather with printed monogram, down fill and quilted satin lining. Removable hood with faux fur trim. Full zip closure with snap placket and patch pockets at lower front. ",
+        "price": 798,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/111166/zo/uPS6d9Nd5Lo.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108777/zo/zg_MoZxL3Uk.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108775/zo/qmgTuQS1tkg.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108776/zo/KmxLu2QagLY.jpg"
         ],
         "availability": "Available"
     },
     {
+        "id": "56c4990c729b27a8de25b5cadacf0292",
+        "title": "Supreme/Playboy© Leather Puffy Jacket",
+        "style": "Brown",
+        "link": "http://www.supremenewyork.com/shop/jackets/supreme-playboy-leather-puffy-jacket/brown",
+        "description": "Leather with printed monogram, down fill and quilted satin lining. Removable hood with faux fur trim. Full zip closure with snap placket and patch pockets at lower front. ",
+        "price": 798,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/111164/zo/iMZYCKEnBQg.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108771/zo/XUt5L2c8Jgs.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108772/zo/NzNVq_5tba0.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
+        ],
+        "availability": "Available"
+    },
+    {
+<<<<<<< HEAD
         "title": "Disrupt Rubber Patch Beanie",
         "style": "Red",
         "link": "http://www.supremenewyork.com/shop/hats/disrupt-rubber-patch-beanie/red",
@@ -1055,10 +1097,37 @@
         "images": [
             "http://d17ol771963kd3.cloudfront.net/110501/zo/J2S9nIRb_2Y.jpg",
             "http://d17ol771963kd3.cloudfront.net/110499/zo/p9jqv-pY4aA.jpg"
+=======
+        "id": "44000f3c169fe59624a988ab52100449",
+        "title": "Supreme/Playboy© Leather Puffy Jacket",
+        "style": "Black",
+        "link": "http://www.supremenewyork.com/shop/jackets/supreme-playboy-leather-puffy-jacket/black",
+        "description": "Leather with printed monogram, down fill and quilted satin lining. Removable hood with faux fur trim. Full zip closure with snap placket and patch pockets at lower front. ",
+        "price": 798,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/111165/zo/SHVoq8qMQ-E.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108768/zo/Pzn3VjDiZ5A.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108769/zo/BAyFYz43b8c.jpg"
         ],
         "availability": "Available"
     },
     {
+        "id": "27016e27faf4b8a31fefc8f3c824d157",
+        "title": "Supreme/Schott® Peacoat",
+        "style": "Black",
+        "link": "http://www.supremenewyork.com/shop/jackets/supreme-schott-peacoat/black",
+        "description": "Custom fit Schott® peacoat in 32 oz. melton wool with faux fur pile lining. Double breasted 8-button closure, hand pockets at lower front and two interior chest pockets. \"2-Tone Check\" Pin included.",
+        "price": 438,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/108899/zo/TD-m1_c5M9Y.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108900/zo/5t9aqwBPxkg.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108901/zo/x0aquqeq-VE.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
+        ],
+        "availability": "Available"
+    },
+    {
+<<<<<<< HEAD
         "title": "Disrupt Rubber Patch Beanie",
         "style": "Fuchsia",
         "link": "http://www.supremenewyork.com/shop/hats/disrupt-rubber-patch-beanie/fuchsia",
@@ -1066,10 +1135,23 @@
         "price": 32,
         "images": [
             "http://d17ol771963kd3.cloudfront.net/109893/zo/AdeMYyN7is0.jpg"
+=======
+        "id": "cbe0fb842e83884dc0a4ed9f60032fe1",
+        "title": "Quilted Flight Satin Parka",
+        "style": "Orange",
+        "link": "http://www.supremenewyork.com/shop/jackets/quilted-flight-satin-parka/orange",
+        "description": "Quilted military spec flight satin nylon with faux fur lining. Full zip front with snap placket and hand pockets at lower front.",
+        "price": 368,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/108840/zo/i5uCn3dpWsI.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108841/zo/BWGYmz639Wc.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108842/zo/qynpsQftrwc.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         ],
         "availability": "Available"
     },
     {
+<<<<<<< HEAD
         "title": "Grid Beanie",
         "style": "Black",
         "link": "http://www.supremenewyork.com/shop/hats/grid-beanie/black",
@@ -1157,10 +1239,115 @@
         "price": 32,
         "images": [
             "http://d17ol771963kd3.cloudfront.net/109907/zo/oWot1NpAJC0.jpg"
+=======
+        "id": "a98d0e300e167dc11c3fa01d3c6bb336",
+        "title": "Quilted Flight Satin Parka",
+        "style": "Black",
+        "link": "http://www.supremenewyork.com/shop/jackets/quilted-flight-satin-parka/black",
+        "description": "Quilted military spec flight satin nylon with faux fur lining. Full zip front with snap placket and hand pockets at lower front.",
+        "price": 368,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/108837/zo/wnhx-Q20f0A.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108838/zo/cYdproYwfXc.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108839/zo/crIy-8YqRWg.jpg"
+        ],
+        "availability": "Available"
+    },
+    {
+        "id": "9bbcba91878b522254494ffdef4c04c1",
+        "title": "Faux Fur Hooded Zip Jacket",
+        "style": "Tan",
+        "link": "http://www.supremenewyork.com/shop/jackets/faux-fur-hooded-zip-jacket/tan",
+        "description": "Faux fur with quilted satin lining and full zip closure. Hand pockets at lower front and interior chest pocket.",
+        "price": 348,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/108871/zo/AxlXepiVYLk.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108873/zo/Y7_mxpFFkt0.jpg"
         ],
         "availability": "Sold Out"
     },
     {
+        "id": "bcb6fb3993f014102012b0363b9649c2",
+        "title": "Faux Fur Hooded Zip Jacket",
+        "style": "Royal",
+        "link": "http://www.supremenewyork.com/shop/jackets/faux-fur-hooded-zip-jacket/royal",
+        "description": "Faux fur with quilted satin lining and full zip closure. Hand pockets at lower front and interior chest pocket.",
+        "price": 348,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/108868/zo/bVkmjSUSt7c.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108869/zo/hItZ-IQ6Wt8.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108870/zo/JNZ_h82OFf0.jpg"
+        ],
+        "availability": "Sold Out"
+    },
+    {
+        "id": "7c4bc19d85115d2f0569c5f46dde9960",
+        "title": "Faux Fur Hooded Zip Jacket",
+        "style": "Black",
+        "link": "http://www.supremenewyork.com/shop/jackets/faux-fur-hooded-zip-jacket/black",
+        "description": "Faux fur with quilted satin lining and full zip closure. Hand pockets at lower front and interior chest pocket.",
+        "price": 348,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/108866/zo/vZ_fWHxAnMA.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108867/zo/Y8Q4CpT84Xs.jpg"
+        ],
+        "availability": "Sold Out"
+    },
+    {
+        "id": "b5c9abd55d64f004b9ba6292cfde7f4f",
+        "title": "Polartec® Fleece Vest",
+        "style": "Magenta",
+        "link": "http://www.supremenewyork.com/shop/jackets/polartec-fleece-vest/magenta",
+        "description": "Polartec® 200 fleece. Full zip closure and hand pockets on lower front. Woven logo zipper pull and binding edge on collar, armhole, pocket and hem. ",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/108934/zo/mQVv-ITRrOA.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108935/zo/3Xic1Gyu8wo.jpg"
+        ],
+        "availability": "Available"
+    },
+    {
+        "id": "d95a6612c78ec65853058f11a9d1a376",
+        "title": "Polartec® Fleece Vest",
+        "style": "Heather Grey",
+        "link": "http://www.supremenewyork.com/shop/jackets/polartec-fleece-vest/heather-grey",
+        "description": "Polartec® 200 fleece. Full zip closure and hand pockets on lower front. Woven logo zipper pull and binding edge on collar, armhole, pocket and hem. ",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/108932/zo/biJyoVo1pxg.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108933/zo/3wplnIOevfQ.jpg"
+        ],
+        "availability": "Sold Out"
+    },
+    {
+        "id": "7546607a775179f7dd36099744c59d96",
+        "title": "Polartec® Fleece Vest",
+        "style": "Medium Blue ",
+        "link": "http://www.supremenewyork.com/shop/jackets/polartec-fleece-vest/medium-blue",
+        "description": "Polartec® 200 fleece. Full zip closure and hand pockets on lower front. Woven logo zipper pull and binding edge on collar, armhole, pocket and hem. ",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/108936/zo/Eg0buYw9v0Y.jpg",
+            "http://d17ol771963kd3.cloudfront.net/108937/zo/mjMik_mOvXs.jpg"
+        ],
+        "availability": "Sold Out"
+    },
+    {
+        "id": "619e9b8f935484c086b01744618e6ed4",
+        "title": "Supreme®/Champion® Sweatpant",
+        "style": "Olive Tiger Stripe",
+        "link": "http://www.supremenewyork.com/shop/pants/supreme-champion-sweatpant/olive-tiger-stripe",
+        "description": "All cotton fleece with elastic cuffs and waistband with interior drawcord. On fold front pockets and back patch pocket. Embroidery and small patch on left leg. Made exclusively for Supreme.",
+        "price": 128,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109305/zo/AlWtY0hl7ys.jpg",
+            "http://d17ol771963kd3.cloudfront.net/109306/zo/y1eKOug1fcE.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
+        ],
+        "availability": "Sold Out"
+    },
+    {
+<<<<<<< HEAD
         "title": "Air Horn",
         "style": "Red",
         "link": "http://www.supremenewyork.com/shop/accessories/air-horn/red",
@@ -1168,10 +1355,22 @@
         "price": 20,
         "images": [
             "http://d17ol771963kd3.cloudfront.net/110161/zo/jpRegPYQrYQ.jpg"
+=======
+        "id": "b47c61c638a3a24720527d2ec094f0ce",
+        "title": "Supreme®/Champion® Snap Front Sweat",
+        "style": "Olive Tiger Stripe",
+        "link": "http://www.supremenewyork.com/shop/sweatshirts/supreme-champion-snap-front-sweat/olive-tiger-stripe",
+        "description": "All cotton fleece with snap front closure. Patch on chest, small patch on wrist, and tackle twill logo on back. Made exclusively for Supreme.",
+        "price": 148,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109334/zo/dMETxL187WI.jpg",
+            "http://d17ol771963kd3.cloudfront.net/109335/zo/fMpOZNVVUyw.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         ],
         "availability": "Sold Out"
     },
     {
+<<<<<<< HEAD
         "title": "Supreme/Victorinox® Money Clip",
         "style": "Black",
         "link": "http://www.supremenewyork.com/shop/accessories/supreme-victorinox-money-clip/black",
@@ -1182,10 +1381,22 @@
             "http://d17ol771963kd3.cloudfront.net/110172/zo/IYcxuQXUimE.jpg",
             "http://d17ol771963kd3.cloudfront.net/110174/zo/II3bZGUL4fI.jpg",
             "http://d17ol771963kd3.cloudfront.net/110176/zo/1sE6Nv6juvI.jpg"
+=======
+        "id": "26ba81ef376697e791160eba83630af3",
+        "title": "Wool Trouser",
+        "style": "Black",
+        "link": "http://www.supremenewyork.com/shop/pants/wool-trouser/black",
+        "description": "Loro Piana® wool with bemberg twill half lining. Slanted front pockets with single coin pocket and zip fly. Back welt pockets with single button closure, creased leg and cuffed hem. ",
+        "price": 188,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109117/zo/IN5XUklW_VE.jpg",
+            "http://d17ol771963kd3.cloudfront.net/109118/zo/jNvsYy1yRoI.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         ],
         "availability": "Available"
     },
     {
+<<<<<<< HEAD
         "title": "Supreme/Hanes® Thermal Crew (1 Pack)",
         "style": "Off White",
         "link": "http://www.supremenewyork.com/shop/accessories/supreme-hanes-thermal-crew-1-pack/off-white",
@@ -1195,10 +1406,22 @@
             "http://d17ol771963kd3.cloudfront.net/110079/zo/5qQNcgfY7nc.jpg",
             "http://d17ol771963kd3.cloudfront.net/110081/zo/fcMIcCwsSgs.jpg",
             "http://d17ol771963kd3.cloudfront.net/110083/zo/fz3c7dBpgDU.jpg"
+=======
+        "id": "b8c06f8d958482f0371d7b8cd3acfdcc",
+        "title": "Wool Trouser",
+        "style": "Brown",
+        "link": "http://www.supremenewyork.com/shop/pants/wool-trouser/brown",
+        "description": "Loro Piana® wool with bemberg twill half lining. Slanted front pockets with single coin pocket and zip fly. Back welt pockets with single button closure, creased leg and cuffed hem. ",
+        "price": 188,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109119/zo/aEikAhzsMU8.jpg",
+            "http://d17ol771963kd3.cloudfront.net/109120/zo/kb0vj4QDifY.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         ],
         "availability": "Available"
     },
     {
+<<<<<<< HEAD
         "title": "Supreme/Hanes® Tagless Tees (3 Pack)",
         "style": "White",
         "link": "http://www.supremenewyork.com/shop/accessories/supreme-hanes-tagless-tees-3-pack/white",
@@ -1207,10 +1430,21 @@
         "images": [
             "http://d17ol771963kd3.cloudfront.net/110502/zo/IopxUfQbcvI.jpg",
             "http://d17ol771963kd3.cloudfront.net/110500/zo/RdpBMFuWq_E.jpg"
+=======
+        "id": "416f91dae14ff5a42da2383dac61ee75",
+        "title": "Work Pant",
+        "style": "Black",
+        "link": "http://www.supremenewyork.com/shop/pants/work-pant/black",
+        "description": "Heavy cotton twill with enzyme wash. Front slash pockets, zip fly, single coin pocket and snap closure on back pocket.",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109130/zo/sSZegDEBnHo.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         ],
         "availability": "Sold Out"
     },
     {
+<<<<<<< HEAD
         "title": "Grid Beanie",
         "style": "Red",
         "link": "http://www.supremenewyork.com/shop/hats/grid-beanie/red",
@@ -1231,10 +1465,34 @@
             "http://d17ol771963kd3.cloudfront.net/110097/zo/jUQeIvAYE1Q.jpg",
             "http://d17ol771963kd3.cloudfront.net/110099/zo/Mp-7MWUz1zo.jpg",
             "http://d17ol771963kd3.cloudfront.net/110100/zo/Ye_1mwUj98M.jpg"
+=======
+        "id": "a015e1dc967bb85b7c76178688d2b9d3",
+        "title": "Eat Me Sweatshort",
+        "style": "Heather Grey",
+        "link": "http://www.supremenewyork.com/shop/pants/eat-me-sweatshort/heather-grey",
+        "description": "Heavyweight cotton crossgrain fleece with print. Rib waistband with on fold front pockets and back patch pocket.",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109277/zo/s_jUPWoj6ho.jpg"
         ],
         "availability": "Available"
     },
     {
+        "id": "25ac62f534a6bbbc0a761a08d628ec1b",
+        "title": "Eat Me Sweatshort",
+        "style": "Red",
+        "link": "http://www.supremenewyork.com/shop/pants/eat-me-sweatshort/red",
+        "description": "Heavyweight cotton crossgrain fleece with print. Rib waistband with on fold front pockets and back patch pocket.",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109279/zo/v7FiBCIlZtc.jpg",
+            "http://d17ol771963kd3.cloudfront.net/110653/zo/MVJ5N6DH-PI.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
+        ],
+        "availability": "Available"
+    },
+    {
+<<<<<<< HEAD
         "title": "David Sims for Supreme Book",
         "style": " ",
         "link": "http://www.supremenewyork.com/shop/accessories/david-sims-for-supreme-book/nbsp",
@@ -1258,10 +1516,33 @@
             "http://d17ol771963kd3.cloudfront.net/110075/zo/QoqQOLyLDUU.jpg",
             "http://d17ol771963kd3.cloudfront.net/110078/zo/WJVDZfd7ECI.jpg",
             "http://d17ol771963kd3.cloudfront.net/110080/zo/oZelNmCM-GQ.jpg"
+=======
+        "id": "cc9b1ac1ebb8441a123623b95078fba2",
+        "title": "Harris Tweed®  Camp Cap",
+        "style": "Green",
+        "link": "http://www.supremenewyork.com/shop/hats/harris-tweed-camp-cap/green",
+        "description": "Harris Tweed® wool Supreme camp cap.",
+        "price": 48,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109553/zo/4pa02-9mzpw.jpg"
         ],
         "availability": "Sold Out"
     },
     {
+        "id": "1dba60d079930a518759100d9059eaa7",
+        "title": "Harris Tweed®  Camp Cap",
+        "style": "Black",
+        "link": "http://www.supremenewyork.com/shop/hats/harris-tweed-camp-cap/black",
+        "description": "Harris Tweed® wool Supreme camp cap.",
+        "price": 48,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109552/zo/ntrpnWWFJCM.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
+        ],
+        "availability": "Sold Out"
+    },
+    {
+<<<<<<< HEAD
         "title": "Supreme/Mophie® Space Station",
         "style": "Red",
         "link": "http://www.supremenewyork.com/shop/accessories/supreme-mophie-space-station/red",
@@ -1281,10 +1562,34 @@
         "price": 49,
         "images": [
             "http://d17ol771963kd3.cloudfront.net/110238/zo/mgWCt5FO3w4.jpg"
+=======
+        "id": "e71b3b7184a4fd308c6f585191577272",
+        "title": "Harris Tweed®  Camp Cap",
+        "style": "Beige",
+        "link": "http://www.supremenewyork.com/shop/hats/harris-tweed-camp-cap/beige",
+        "description": "Harris Tweed® wool Supreme camp cap.",
+        "price": 48,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109551/zo/QXTF9fHEy9c.jpg"
+        ],
+        "availability": "Sold Out"
+    },
+    {
+        "id": "598b2ff25a89d79fdebc5fec089045cf",
+        "title": "Polartec® Fleece Pant",
+        "style": "Magenta",
+        "link": "http://www.supremenewyork.com/shop/pants/polartec-fleece-pant/magenta",
+        "description": "Polartec® 200 fleece. Front slash pockets, single back zip pocket, and elastic waistband and cuffs. Embroidered logo on back pocket.",
+        "price": 128,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109156/zo/5RJir4GdlsM.jpg",
+            "http://d17ol771963kd3.cloudfront.net/109157/zo/FNgPfdHvhJ0.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         ],
         "availability": "Available"
     },
     {
+<<<<<<< HEAD
         "title": "Supreme/Braun® ET66 Calculator",
         "style": "White",
         "link": "http://www.supremenewyork.com/shop/accessories/supreme-braun-et66-calculator/white",
@@ -1293,10 +1598,22 @@
         "images": [
             "http://d17ol771963kd3.cloudfront.net/110204/zo/IT71Y6mmyFg.jpg",
             "http://d17ol771963kd3.cloudfront.net/110200/zo/Usggr9OSOyM.jpg"
+=======
+        "id": "5a685854288d635deefacccf8dcb41fe",
+        "title": "Eat Me Sweatshort",
+        "style": "Black",
+        "link": "http://www.supremenewyork.com/shop/pants/eat-me-sweatshort/black",
+        "description": "Heavyweight cotton crossgrain fleece with print. Rib waistband with on fold front pockets and back patch pocket.",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109275/zo/lSGlWmdaOZs.jpg",
+            "http://d17ol771963kd3.cloudfront.net/109276/zo/QehKMxGRqXE.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         ],
         "availability": "Available"
     },
     {
+<<<<<<< HEAD
         "title": "Supreme/Independent® Trucks",
         "style": "Silver",
         "link": "http://www.supremenewyork.com/shop/skate/supreme-independent-trucks/silver",
@@ -1316,10 +1633,35 @@
         "price": 49,
         "images": [
             "http://d17ol771963kd3.cloudfront.net/110240/zo/zMPjbQFbKTE.jpg"
+=======
+        "id": "4dee7a72d770ecf0087ea4280dafae4d",
+        "title": "Work Pant",
+        "style": "Navy",
+        "link": "http://www.supremenewyork.com/shop/pants/work-pant/navy",
+        "description": "Heavy cotton twill with enzyme wash. Front slash pockets, zip fly, single coin pocket and snap closure on back pocket.",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109139/zo/dmFZ-1nlZwI.jpg",
+            "http://d17ol771963kd3.cloudfront.net/110651/zo/mvyrVmJhmPE.jpg"
+        ],
+        "availability": "Sold Out"
+    },
+    {
+        "id": "96b326f41e367cefa40a466d89e8fd37",
+        "title": "Black Slim Jean",
+        "style": "Dyed Black",
+        "link": "http://www.supremenewyork.com/shop/pants/black-slim-jean/dyed-black",
+        "description": "All cotton 14 oz. denim with rinse wash. Classic 5-pocket style with copper oxide rivets, button fly, and black leather patch on back.",
+        "price": 128,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109148/zo/dCs0Svkn44k.jpg",
+            "http://d17ol771963kd3.cloudfront.net/109149/zo/-PhFFbvbDuo.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
         ],
         "availability": "Available"
     },
     {
+<<<<<<< HEAD
         "title": "E.T.™ Skateboard",
         "style": "Print",
         "link": "http://www.supremenewyork.com/shop/skate/e-t-skateboard/print",
@@ -1349,10 +1691,33 @@
         "images": [
             "http://d17ol771963kd3.cloudfront.net/110058/zo/mVIY5HJlRb4.jpg",
             "http://d17ol771963kd3.cloudfront.net/110059/zo/PTYGDZrvXg8.jpg"
+=======
+        "id": "6320df6f9e34ac53e6ce715603d780fb",
+        "title": "Work Pant",
+        "style": "Khaki",
+        "link": "http://www.supremenewyork.com/shop/pants/work-pant/khaki",
+        "description": "Heavy cotton twill with enzyme wash. Front slash pockets, zip fly, single coin pocket and snap closure on back pocket.",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109136/zo/ojsVUc6F54U.jpg"
         ],
         "availability": "Sold Out"
     },
     {
+        "id": "86a89f7c60bc88c8d950762ee0a1e997",
+        "title": "Work Pant",
+        "style": "Brown",
+        "link": "http://www.supremenewyork.com/shop/pants/work-pant/brown",
+        "description": "Heavy cotton twill with enzyme wash. Front slash pockets, zip fly, single coin pocket and snap closure on back pocket.",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109131/zo/755gMHDyk-U.jpg"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
+        ],
+        "availability": "Sold Out"
+    },
+    {
+<<<<<<< HEAD
         "title": "3D Lucite Uzi Keychain",
         "style": "Clear",
         "link": "http://www.supremenewyork.com/shop/accessories/3d-lucite-uzi-keychain/clear",
@@ -1374,5 +1739,30 @@
             "http://d17ol771963kd3.cloudfront.net/110056/zo/Iwd5MYaAj4g.jpg"
         ],
         "availability": "Available"
+=======
+        "id": "ac0c3cdbfdb267f4a77719d8cb80514b",
+        "title": "Work Pant",
+        "style": "Grey",
+        "link": "http://www.supremenewyork.com/shop/pants/work-pant/grey",
+        "description": "Heavy cotton twill with enzyme wash. Front slash pockets, zip fly, single coin pocket and snap closure on back pocket.",
+        "price": 118,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109135/zo/_1pRyRID-W8.jpg"
+        ],
+        "availability": "Sold Out"
+    },
+    {
+        "id": "c9941f3f60646479725c845f49c7266a",
+        "title": "Polartec® Fleece Pant",
+        "style": "Heather Grey",
+        "link": "http://www.supremenewyork.com/shop/pants/polartec-fleece-pant/heather-grey",
+        "description": "Polartec® 200 fleece. Front slash pockets, single back zip pocket, and elastic waistband and cuffs. Embroidered logo on back pocket.",
+        "price": 128,
+        "images": [
+            "http://d17ol771963kd3.cloudfront.net/109154/zo/QwA28TV91XU.jpg",
+            "http://d17ol771963kd3.cloudfront.net/109155/zo/QmQlvQxWWtA.jpg"
+        ],
+        "availability": "Sold Out"
+>>>>>>> 37044eaafbdde324080c669f92fcc131211d3556
     }
 ]
