@@ -23,19 +23,17 @@ Example:
 
 Data Returned:
 ```JSON
-[
-    {
-        "id": "7c6f6661981ce08f4851dddf37c8d086",
-        "title": "Polartec® Fleece Pant",
-        "style": "Medium Blue",
-        "link": "http://www.supremenewyork.com/shop/pants/polartec-fleece-pant/medium-blue",
-        "description": "Polartec® 200 fleece. Front slash pockets, single back zip pocket, and elastic waistband and cuffs. Embroidered logo on back pocket.",
-        "price": 128,
-        "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg","http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
-        "availability": "Available"
-        },
-        ...
-]
+{
+    "id": "7c6f6661981ce08f4851dddf37c8d086",
+    "title": "Polartec® Fleece Pant",
+    "style": "Medium Blue",
+    "link": "http://www.supremenewyork.com/shop/pants/polartec-fleece-pant/medium-blue",
+    "description": "Polartec® 200 fleece. Front slash pockets, single back zip pocket, and elastic waistband and cuffs. Embroidered logo on back pocket.",
+    "price": 128,
+    "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg","http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
+    "availability": "Available"
+},
+
 ```
 
 <br>
@@ -62,7 +60,7 @@ Data Returned:
     "price": 128,
     "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg", "http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
     "availability": "Available"
-    }
+}
 ```
 
 <br>
@@ -90,8 +88,8 @@ Data Returned:
         "price": 128,
         "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg","http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
         "availability": "Available"
-        },
-        ...
+    },
+    ...
 ]
 ```
 
@@ -120,8 +118,8 @@ Data Returned:
         "price": 128,
         "images": ["http://d17ol771963kd3.cloudfront.net/109158/zo/3u8uwZ7UgJA.jpg","http://d17ol771963kd3.cloudfront.net/110960/zo/6ufa2O6Lhx0.jpg"],
         "availability": "Available"
-        },
-        ...
+    },
+    ...
 ]
 ```
 
