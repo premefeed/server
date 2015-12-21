@@ -8,6 +8,7 @@ var request = require('request'),
     cheerio = require('cheerio'),
     twilio = require('twilio'),
     express = require('express'),
+    Parse = require('parse/node'),
     fs = require('fs'),
     client = require('twilio'),
     ejs =  require('ejs'),
@@ -17,6 +18,12 @@ var request = require('request'),
     app = express();
 
 app.set('view engine','ejs');
+
+Parse.initialize(
+    process.env.PARSE_APPID, // applicationId
+    process.env.PARSE_JSKEY, // javaScriptKey
+    process.env.PARSE_MASTERKEY // masterKey
+  );
 
 var url = "http://www.supremenewyork.com/shop/all";
 
@@ -47,7 +54,7 @@ crawler.on("fetchcomplete", function (queueItem) {
 
                 var title = $(this).attr('alt');
                 var availability = nextElement.text().capitalizeEachWord();
-                
+
                 var link = "http://www.supremenewyork.com" + this.parent.attribs.href;
 
                 if (availability == "") availability = "Available";
@@ -86,6 +93,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                 })
 
                 // Do we need this shit? Only need I see is for detecting when Supreme makes changes, so that we can send out notifications -sam
+                // yay sam just let me finish this shit up lmao 
                 /*fs.readFile('output.json', function(err, data) {
                     if (err) throw err;
                     var obj = JSON.parse(data);
@@ -93,6 +101,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                         console.log('Something has changed.');
                   }
               });*/
+
             });
         } else if (err && resp.statusCode != 200) {
             console.log("Error: " + err + "\n with status code: " + resp.statusCode);
