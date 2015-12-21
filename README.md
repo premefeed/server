@@ -2,7 +2,7 @@
 
 Backend for PremeFeed services. The server implements an API service and *eventually* a subscription service.
 
-Created by <a href="https://github.com/dzt/">Peter</a>, <a href="https://github.com/10Frank10/">Frank</a>, <a href="https://github.com/cryptoc1">Sam</a>, and some help from <a href="https://github.com/trommel">Josh</a>.
+Created by <a href="https://github.com/dzt/">Peter</a>, <a href="https://github.com/10Frank10/">Frank</a>, and <a href="https://github.com/cryptoc1">Sam</a>.
 
 ### API/Structure
 
