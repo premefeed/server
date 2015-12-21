@@ -16,12 +16,6 @@ var request = require('request'),
     Crawler = require('simplecrawler'),
     app = express();
 
-// app config stuff
-// I commented this shit so that I could test locally -sam
-/*
-var TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID,
-    TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
-var client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);*/
 app.set('view engine','ejs');
 
 var url = "http://www.supremenewyork.com/shop/all";
@@ -184,37 +178,6 @@ app.get('/api/items/all', function(req, res) {
 /*
  *  END API ENDPOINTS
  */
-
-
-// Commented out, so that I could locally test shit. -sam
-/*
-app.post('/sms_subscribe', function(req, res) {
-    setTimeout(function(){
-        try {
-            SendMessage(req.body.phoneNumber, function(result){
-                res.writeHead(200, {"Content-Type": "application/json"});
-                res.end(JSON.stringify({"success": true}));
-            });
-        } catch (err) {
-            console.log(err);
-        }
-    }, 5000);
-});
-
-function SendMessage(phoneNumber, callback) {
-    if (phoneNumber[0] !== "1") {
-        phoneNumber = "1" + phoneNumber;
-    }
-    client.sendSms({
-        to: '+'+phoneNumber,
-        from: process.env.TWILIO_NUMBER,
-        body: "Gang Gang" +
-            " - Peter "
-    }, function(err, responseData){
-        console.log(err);
-        callback(responseData);
-    });
-}
 
 // What is this? -sam
 app.get('/chart', function (req, res) {
