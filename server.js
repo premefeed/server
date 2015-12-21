@@ -95,7 +95,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                 })
 
                 // Do we need this shit? Only need I see is for detecting when Supreme makes changes, so that we can send out notifications -sam
-                // yay sam just let me finish this shit up lmao 
+                // yay sam just let me finish this shit up lmao
                 /*fs.readFile('output.json', function(err, data) {
                     if (err) throw err;
                     var obj = JSON.parse(data);
@@ -132,7 +132,7 @@ app.get('/api/v1/item/id', function(req, res) {
         data = JSON.parse(data);
         var ret;
         for (i in data) {
-            if (data[i].itemLink == req.query.id) {
+            if (data[i].id == req.query.id) {
                 ret = data[i];
             }
         }
