@@ -15,7 +15,7 @@ Returns an item by its title.
 
 URL parameters:
 
-    * title    :   The title of the item to find
+* title    :   The title of the item to find
 
 Example:
 
@@ -41,7 +41,7 @@ Returns an item by its link.
 
 URL parameters:
 
-    * link  :   Link of the item to find
+* link  :   Link of the item to find
 
 Example:    
 
@@ -67,7 +67,7 @@ Returns an array of items by their availability.
 
 URL parameters:
 
-    * availability  :   Availability of the items to find (can be `Available` or `Sold Out`)
+* availability  :   Availability of the items to find (can be `Available` or `Sold Out`)
 
 Example:
 
@@ -99,7 +99,7 @@ Returns an array of all items in the Database.
 
 URL parameters:
 
-    None
+None
 
 Example:
     `GET: premefeed.herokuapp.com/api/v1/items/all`
