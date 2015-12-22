@@ -52,7 +52,7 @@ crawler.on("fetchcomplete", function (queueItem) {
 
                 var nextElement = $(this).next();
                 var prevElement = $(this).prev();
-
+                var image = "http://" + $(this).attr('src').substring(2);
                 var title = $(this).attr('alt');
                 var availability = nextElement.text().capitalizeEachWord();
 
@@ -75,6 +75,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                         link: link,
                         description: $('.description').text(),
                         price: parseInt(($('.price')[0].children[0].children[0].data).replace('$', '').replace(',', '')),
+                        image: image,
                         images: [],
                         availability: availability
                     };
