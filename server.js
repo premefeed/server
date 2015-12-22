@@ -52,7 +52,7 @@ crawler.on("fetchcomplete", function (queueItem) {
 
                 var nextElement = $(this).next();
                 var prevElement = $(this).prev();
-
+                var image = "https://" + $(this).attr('src').substring(2);
                 var title = $(this).attr('alt');
                 var availability = nextElement.text().capitalizeEachWord();
 
@@ -76,6 +76,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                         link: link,
                         description: $('.description').text(),
                         price: parseInt(($('.price')[0].children[0].children[0].data).replace('$', '').replace(',', '')),
+                        image: image,
                         images: [],
                         availability: availability
                     };
@@ -86,7 +87,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                         for (li in styles) {
                             for (a in styles[li].children) {
                                 if (styles[li].children[a].attribs['data-style-name'] == metadata.style) {
-                                    metadata.images.push('http:' + JSON.parse(styles[li].children[a].attribs['data-images']).zoomed_url)
+                                    metadata.images.push('https:' + JSON.parse(styles[li].children[a].attribs['data-images']).zoomed_url)
                                 }
                             }
                         }
@@ -94,6 +95,17 @@ crawler.on("fetchcomplete", function (queueItem) {
                     //console.log(parsedResults);
                     parsedResults.push(metadata);
                 })
+
+                // Do we need this shit? Only need I see is for detecting when Supreme makes changes, so that we can send out notifications -sam
+                // yay sam just let me finish this shit up lmao
+                /*fs.readFile('output.json', function(err, data) {
+                    if (err) throw err;
+                    var obj = JSON.parse(data);
+                    if (obj != parsedResults) {
+                        console.log('Something has changed.');
+                  }
+              });*/
+
             });
         } else if (err && resp.statusCode != 200) {
             console.log("Error: " + err + "\n with status code: " + resp.statusCode);
@@ -133,7 +145,7 @@ app.get('/api/v1/item/id', function(req, res) {
         data = JSON.parse(data);
         var ret;
         for (i in data) {
-            if (data[i].itemLink == req.query.id) {
+            if (data[i].id == req.query.id) {
                 ret = data[i];
             }
         }
