@@ -27,13 +27,9 @@ Parse.initialize(
   );
 
 var url = "http://www.supremenewyork.com/shop/all";
-
 var crawler = Crawler.crawl(url);
 crawler.interval = 10000;
 crawler.maxConcurrency = 1;
-
-var mins = 0.05,
-    interval_a = mins * 60 * 1000
 
 String.prototype.capitalizeEachWord = function() {
     return this.replace(/\w\S*/g, function(txt) {
@@ -92,19 +88,9 @@ crawler.on("fetchcomplete", function (queueItem) {
                             }
                         }
                     }
-                    //console.log(parsedResults);
+                    // console.log(metadata);
                     parsedResults.push(metadata);
                 })
-
-                // Do we need this shit? Only need I see is for detecting when Supreme makes changes, so that we can send out notifications -sam
-                // yay sam just let me finish this shit up lmao
-                /*fs.readFile('output.json', function(err, data) {
-                    if (err) throw err;
-                    var obj = JSON.parse(data);
-                    if (obj != parsedResults) {
-                        console.log('Something has changed.');
-                  }
-              });*/
 
             });
         } else if (err && resp.statusCode != 200) {
@@ -115,22 +101,54 @@ crawler.on("fetchcomplete", function (queueItem) {
     });
 });
 
+var url2 = "http://www.supremenewyork.com/shop/all";
+var crawler2 = Crawler.crawl(url2);
+crawler2.interval = 10000;
+crawler2.maxConcurrency = 1;
+
+crawler2.on("fetchcomplete", function (queueItem) {
+    request(url2, function(error, response, html) {
+
+    var latestItem;
+    var json = {
+        latestItem: ""
+    };
+
+    if (!error && response.statusCode == 200) {
+        var $ = cheerio.load(html);
+
+        var latestItem = $('img:first-child').attr('alt');
+        console.log(latestItem);
+
+            json.latestItem = latestItem;
+            console.log(json);
+
+            fs.readFile('latestItem.json', function(err, data) {
+                //if (err) throw err;
+                var obj = JSON.parse(data);
+                if (obj.latestItem != latestItem) {
+                    console.log('Item Name has changed.');
+                    fs.writeFile('latestItem.json', JSON.stringify(json, null, 4), function(err) {
+                        console.log('Item Name saved in latestItem.json file');
+                    });
+                }
+                if (obj.latestItem != latestItem) {
+
+                    console.log("Item name has changed sending push notification...")
+
+                    // TODO: Parse Push 
+
+                }
+            });
+    }
+
+    });
+});
+
 
 app.get('/', function(req, res) {
     res.send('<a href="/api/v1/items/all">Click here to get some data</a></br><a href="http://premefeed.github.io/">GitHub</a>');
 });
-
-/* still can't figure this out
-fs.readFile('output.json', function(err, data) {
-
-        if (err) console.log(err);
-        if (data != parsedResults) {
-        // Do shit
-        console.log("Something changed");
-
-    }
-});
-*/
 
 /*
  *
