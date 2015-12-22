@@ -62,8 +62,9 @@ crawler.on("fetchcomplete", function (queueItem) {
 
                 // Scrapes an items product page for: images, price, description, and style. It then writes to output.json
                 request(link, function(err, resp, html, rrr, body) {
+
                     fs.writeFile('output.json', JSON.stringify(parsedResults, null, 4), function(err) {
-                        if (err) console.log(err);
+
                     });
 
                     var $ = cheerio.load(html);
@@ -90,20 +91,9 @@ crawler.on("fetchcomplete", function (queueItem) {
                             }
                         }
                     }
-
+                    //console.log(parsedResults);
                     parsedResults.push(metadata);
                 })
-
-                // Do we need this shit? Only need I see is for detecting when Supreme makes changes, so that we can send out notifications -sam
-                // yay sam just let me finish this shit up lmao 
-                /*fs.readFile('output.json', function(err, data) {
-                    if (err) throw err;
-                    var obj = JSON.parse(data);
-                    if (obj != parsedResults) {
-                        console.log('Something has changed.');
-                  }
-              });*/
-
             });
         } else if (err && resp.statusCode != 200) {
             console.log("Error: " + err + "\n with status code: " + resp.statusCode);
@@ -118,6 +108,17 @@ app.get('/', function(req, res) {
     res.send('<a href="/api/v1/items/all">Click here to get some data</a></br><a href="http://premefeed.github.io/">GitHub</a>');
 });
 
+/* still can't figure this out
+fs.readFile('output.json', function(err, data) {
+
+        if (err) console.log(err);
+        if (data != parsedResults) {
+        // Do shit
+        console.log("Something changed");
+
+    }
+});
+*/
 
 /*
  *
