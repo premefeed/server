@@ -52,7 +52,7 @@ crawler.on("fetchcomplete", function (queueItem) {
 
                 var nextElement = $(this).next();
                 var prevElement = $(this).prev();
-                var image = "http://" + $(this).attr('src').substring(2);
+                var image = "https://" + $(this).attr('src').substring(2);
                 var title = $(this).attr('alt');
                 var availability = nextElement.text().capitalizeEachWord();
 
@@ -86,7 +86,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                         for (li in styles) {
                             for (a in styles[li].children) {
                                 if (styles[li].children[a].attribs['data-style-name'] == metadata.style) {
-                                    metadata.images.push('http:' + JSON.parse(styles[li].children[a].attribs['data-images']).zoomed_url)
+                                    metadata.images.push('https:' + JSON.parse(styles[li].children[a].attribs['data-images']).zoomed_url)
                                 }
                             }
                         }
