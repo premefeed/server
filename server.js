@@ -136,7 +136,14 @@ crawler2.on("fetchcomplete", function (queueItem) {
 
                     console.log("Item name has changed sending push notification...")
 
-                    // TODO: Parse Push 
+                    // TODO: Parse Push
+
+                    Parse.Push.send({
+                     where: new Parse.Query(Parse.Installation),
+                     data: {
+                          alert: "New Drop: " + obj.latestItem
+                        }
+                    });
 
                 }
             });
