@@ -124,7 +124,9 @@ crawler2.on("fetchcomplete", function (queueItem) {
             console.log(json);
 
             fs.readFile('latestItem.json', function(err, data) {
-                //if (err) throw err;
+                if (err) {
+                    throw err;
+                }
                 var obj = JSON.parse(data);
                 if (obj.latestItem != latestItem) {
                     console.log('Item Name has changed.');
@@ -154,7 +156,7 @@ crawler2.on("fetchcomplete", function (queueItem) {
 
 
 app.get('/', function(req, res) {
-    res.send('<a href="/api/v1/items/all">Click here to get some data</a></br><a href="http://premefeed.github.io/">GitHub</a>');
+    res.render('index');
 });
 
 /*
