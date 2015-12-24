@@ -77,7 +77,7 @@ Example:
 
 Data Returned:
 ```JSON
-[
+{ "items": [
     {
         "id": "7c6f6661981ce08f4851dddf37c8d086",
         "title": "Polartec® Fleece Pant",
@@ -89,7 +89,7 @@ Data Returned:
         "availability": "Available"
     },
     ...
-]
+] }
 ```
 
 <br>
@@ -107,7 +107,7 @@ Example:
 
 Data Returned:
 ```JSON
-[
+{ "items": [
     {
         "id": "7c6f6661981ce08f4851dddf37c8d086",
         "title": "Polartec® Fleece Pant",
@@ -119,7 +119,7 @@ Data Returned:
         "availability": "Available"
     },
     ...
-]
+] }
 ```
 
 <br>
@@ -137,7 +137,7 @@ Example:
 
  Data Returned:
  ```JSON
-[
+{ "items": [
     {
         ...
     },
@@ -145,7 +145,7 @@ Example:
         ...
     },
     ...
-]
+] }
  ```
 
 <br>
