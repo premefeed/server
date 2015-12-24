@@ -42,7 +42,10 @@ crawler.on("fetchcomplete", function (queueItem) {
         // Successful request
         if (!err && resp.statusCode == 200) {
             var $ = cheerio.load(html);
-            var parsedResults = [];
+
+            var parsedResults = {
+                items: []
+            };
 
             $('img').each(function(i, element) {
 
@@ -93,7 +96,7 @@ crawler.on("fetchcomplete", function (queueItem) {
                     }
 
                     // console.log(metadata);
-                    parsedResults.push(metadata);
+                    parsedResults.items.push(metadata);
                 })
 
             });
