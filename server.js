@@ -24,7 +24,7 @@ Parse.initialize(
     process.env.PARSE_APPID, // applicationId
     process.env.PARSE_JSKEY, // javaScriptKey
     process.env.PARSE_MASTERKEY // masterKey
-  );
+);
 
 var url = "http://www.supremenewyork.com/shop/all";
 var crawler = Crawler.crawl(url);
@@ -87,7 +87,11 @@ crawler.on("fetchcomplete", function (queueItem) {
                                 }
                             }
                         }
+                    } else if (title.indexOf('Skateboard') != -1) {
+                        // Because fuck skateboards
+                        metadata.images.push('https:' + $('#img-main').attr('src'))
                     }
+
                     // console.log(metadata);
                     parsedResults.push(metadata);
                 })
@@ -173,7 +177,7 @@ app.get('/api/v1/recent', function(req, res) {
     Schema: JSON
     [
         {
-        
+
             "name": "Some Item Name",
             "style": "Print",
             "timeAdded": "2015-12-22 14:00:00"
