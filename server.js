@@ -1,7 +1,3 @@
-// server.js
-// Peter Soboyejo
-// http://www.github.com/dzt
-
 var request = require('request'),
     cheerio = require('cheerio'),
     twilio = require('twilio'),
