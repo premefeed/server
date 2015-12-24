@@ -161,7 +161,9 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
-app.get('/api/v1/recent', function(req, res) {
+app.get('/api/v1/items/recentlyadded', function(req, res) {
+
+    res.send('<b>Coming Soon</b>');
 
 
     // TODO - save to recent.json
