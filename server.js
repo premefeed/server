@@ -2,8 +2,6 @@
 // Peter Soboyejo
 // http://www.github.com/dzt
 
-// Last modified: 12/21/2015, @cryptoc1
-
 var request = require('request'),
     cheerio = require('cheerio'),
     twilio = require('twilio'),
