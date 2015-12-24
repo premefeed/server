@@ -136,10 +136,7 @@ crawler2.on("fetchcomplete", function (queueItem) {
                 }
                 if (obj.latestItem != latestItem) {
 
-                    console.log("Item name has changed sending push notification...")
-
-                    // TODO: Parse Push
-
+                    console.log("Item name has changed sending push notification...");
                     Parse.Push.send({
                      where: new Parse.Query(Parse.Installation),
                      data: {
@@ -157,6 +154,28 @@ crawler2.on("fetchcomplete", function (queueItem) {
 
 app.get('/', function(req, res) {
     res.render('index');
+});
+
+app.get('/api/v1/recent', function(req, res) {
+
+
+    // TODO - save to recent.json
+    /*
+
+    Schema: JSON
+    [
+        {
+        
+            "name": "Some Item Name",
+            "style": "Print",
+            "timeAdded": "2015-12-22 14:00:00"
+
+        }
+
+
+    ]
+    */
+
 });
 
 /*
