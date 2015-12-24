@@ -163,14 +163,6 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
-app.get('/test', function(req, res) {
-
-    fs.readFile('test.json', function(err, data) {
-        res.send(JSON.parse(data));
-    });
-
-});
-
 app.get('/api/v1/recent', function(req, res) {
 
 
