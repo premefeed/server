@@ -219,7 +219,7 @@ app.get('/api/v1/item/link', function(req, res) {
         data = JSON.parse(data);
         var ret;
         for (i in data) {
-            if (data[i].itemLink == req.query.link) {
+            if (data[i].link == req.query.link) {
                 ret = data[i];
             }
         }
