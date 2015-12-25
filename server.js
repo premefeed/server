@@ -157,10 +157,18 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
+app.get('/donate', function(req, res) {
+
+    // soon to be a redirection to a paypal page
+    res.send('<b>Nothing to see here (yet).</b>');
+
+
+});
+
+// shoes recently added items with time stamps
 app.get('/api/v1/items/recentlyadded', function(req, res) {
 
     res.send('<b>Coming Soon</b>');
-
 
     // TODO - save to recent.json
     /*
@@ -178,7 +186,6 @@ app.get('/api/v1/items/recentlyadded', function(req, res) {
 
     ]
     */
-
 });
 
 /*
